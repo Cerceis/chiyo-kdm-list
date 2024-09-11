@@ -39,7 +39,7 @@ watch(
 			clearTimeout(keywordTimeout)
 		keywordTimeout = setTimeout(() => {
 			keyword.value = keywordDelay.value
-		}, 1000);
+		}, 500);
 	}
 )
 
@@ -61,9 +61,11 @@ const filteredProducts = computed(() => {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	justify-content: center;
+	align-items: flex-start;
 }
 .check-list-panel{
 	display: grid;
+	width: 100vw;
 	grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
 	gap: 0.5em;
 }
